@@ -36,7 +36,7 @@ def _get_input(it) -> tuple[torch.Tensor, torch.Tensor]:
 if __name__ == '__main__':
     model = _get_model()
     opt = _get_optimizer(model)
-    for iteration in range(1000):
+    for iteration in range(10):
         input_data, target = _get_input(iteration + 1)
         output = model(input_data)
 
