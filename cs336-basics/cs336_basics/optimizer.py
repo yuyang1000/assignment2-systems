@@ -47,6 +47,7 @@ class AdamW(torch.optim.Optimizer):
         defaults = dict(lr=lr, betas=betas, eps=eps, weight_decay=weight_decay)
         super().__init__(params, defaults)
 
+    @torch.no_grad()
     def step(self, closure: Callable | None = None):
         loss = None
         if closure is not None:
